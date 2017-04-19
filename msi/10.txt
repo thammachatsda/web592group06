@@ -1,0 +1,8 @@
+MSI GS40 6QE
+Intel Core i7-6700HQ (2.60 - 3.50 GHz) 
+NVIDIA GeForce GTX 970M (3GB GDDR5)
+16 GB DDR4
+128 GB SSD (PCI-E GEN3 NVMe) + 1TB 7200RPM
+14 inch (1920x1080) Full HD
+Windows 10
+price 59,900 bath

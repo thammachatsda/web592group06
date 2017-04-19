@@ -1,0 +1,8 @@
+MSI WT72
+Intel Core i7-6700HQ (2.60 - 3.50 GHz) 
+NVIDIA Quadro M3000M (4 GB GDDR5)
+32 GB DDR4
+128 GB SSD (PCI-E GEN3 NVMe) + 1TB 7200RPM
+17.3 inch (1920x1080) Full HD eDP Wide View Angle
+Windows 10 Pro 64 (64 Bit)
+price 119,900 bath
