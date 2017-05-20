@@ -1,4 +1,5 @@
 <?php
+error_reporting(0);
  if(!$user) return;
 global $userdata;
 if($_POST["feedback"]==null){
@@ -37,3 +38,7 @@ echo "<br>บันทึกเรียบร้อย <a href='work1.php?p=$pa
 </div> <!-- /.col-10 -->
 </div> <!-- /.row -->
 </form>
+
+
+
+
