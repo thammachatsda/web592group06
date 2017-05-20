@@ -8,6 +8,7 @@
  if(file_exists($fbfile)){
  $fbjson = file_get_contents($fbfile);
  $fbdata = json_decode($fbjson, true);
+
  echo "<hr>";
  foreach($fbdata as $fb){
  $text = htmlspecialchars($fb['feedback']);
@@ -19,6 +20,7 @@
  echo "<div class='col-xs-10'>";
  echo "<a href='#'>$fb[name]</a><br>$text <br>";
  echo "<a href='#'>ถูกใจ</a> $time<hr>";
+
  echo "</div>";
  echo "</div>";
  }
