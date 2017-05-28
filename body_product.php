@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
@@ -42,6 +42,7 @@
                 </div>
             </div>	
 <?php
+error_reporting(0);
  $gid=$_GET['g'];
  use google\appengine\api\users\UserService;
  use google\appengine\api\cloud_storage\CloudStorageTools;
@@ -60,7 +61,7 @@ echo "
 			
  
  if(UserService::isCurrentUserAdmin()){
-    echo "<a href='main.php?p=additem&g=$gid'><html><h3>เพื่มรายการสินค้า</h3></html></a>";
+    echo "<a href='main.php?p=additem&g=$gid'><html><h3>เพิ่มรายการสินค้า</h3></html></a>";
  }
  
  
@@ -79,66 +80,49 @@ echo "
 	
 	
 	
-	 <div class="row">
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <div> 
-                        <img src='<?php echo $img; ?>' class="img-responsive" width="430" height="10" >
-						</div>
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4><?php echo $prec[name]; ?></h4>
-                        <p class="text-muted">ราคา <?php echo $prec[price]; ?> ฿</p>
-                        <?php
- if(UserService::isCurrentUserAdmin()){
+	<body>
+
+<div class="container">
+  <div class="row text-center">
+    <div class="col-sm-4 col-md-4 col-lg-4 col-xs-6">
+      <div class="thumbnail"> <img src='<?php echo $img; ?>' class="img-responsive" width="350" height="250" >
+        <div class="caption">
+          <h2><?php echo $prec[name]; ?></h2>
+          <p>ราคา <?php echo $prec[price]; ?> ฿</p>
+          <p><?php echo $prec[detail]; ?></p>
+            <?php
+ 				if(UserService::isCurrentUserAdmin()){
       echo " | <a href='main.php?p=additem&g=$gid&i=$pid'>Edit</a>";
    }
 
  
  ?>
-                        
-                        
-					</div>
-                </div>
-                <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="close-modal" data-dismiss="modal">
-                    <div class="lr">
-                        <div class="rl">
-                        </div>
-                    </div>
-                </div>
-			
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-8 col-lg-offset-2">
-                            <div class="modal-body">
-                                <!-- Project Details Go Here -->
-                                <h2><?php echo $prec[name]; ?></h2>
-                                <p class="item-intro text-muted">ราคา <?php echo $prec[price]; ?> ฿</p>
-                                <img class="img-responsive img-centered" src='<?php echo $img; ?>' alt="">
-                                <p><?php echo $prec[detail]; ?></p>
-                             
-                                <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Detail</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            
+        <div class="container">
+  <div class="row text-center">
+    <div class="col-sm-4 col-md-4 col-lg-4 col-xs-6">
+    
+        <div class="caption">
+          
+         
         </div>
+      </div>
+   
+      
+  
+	
+                    
+                        
+                    </div>
+					</div>
+               </div>
+        
 		 </div>
-			</div>
+	</div>
 			
-	<?php
- 
-				}
- 
+	 <?php
+ 				
+   }
+
  
  ?>
 	</div>
