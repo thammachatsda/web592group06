@@ -87,8 +87,8 @@ echo "
     <div class="col-sm-4 col-md-4 col-lg-4 col-xs-6">
       <div class="thumbnail"> <img src='<?php echo $img; ?>' class="img-responsive" width="350" height="250" >
         <div class="caption">
-          <h2><?php echo $prec[name]; ?></h2>
-          <p>ราคา <?php echo $prec[price]; ?> ฿</p>
+         <h3><?php echo $prec[name]; ?></h3>
+			<p><h4><font color="#FF0000">ราคา <?php echo $prec[price]; ?> ฿</font></h4></p>
           <p><?php echo $prec[detail]; ?></p>
             <?php
  				if(UserService::isCurrentUserAdmin()){
